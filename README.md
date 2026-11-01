@@ -1,10 +1,10 @@
 # Corner Broker | Formula SAE data acquisition board
 
-Corner Broker is a custom sensor and CAN interface PCB for **Northwestern Formula Racing**. It brings strain-gauge and suspension-potentiometer signals into an STM32-based corner data acquisition system. This repository presents the **hardware design through schematic and PCB screenshots**; the team maintains the embedded software in [NU-Formula-Racing/daq-corner-26](https://github.com/NU-Formula-Racing/daq-corner-26).
+Corner Broker is a completed sensor and CAN interface PCB for **Northwestern Formula Racing**. It brings strain-gauge and suspension-potentiometer signals into an STM32-based corner data acquisition system. The assembled board was integrated into the team's EV for the **2026–2027 Formula SAE season**. This repository presents the hardware through schematic and PCB screenshots; the team maintains the embedded software in [NU-Formula-Racing/daq-corner-26](https://github.com/NU-Formula-Racing/daq-corner-26).
 
 ## My contributions
 
-- **Hardware:** Corner Broker schematic capture and PCB layout, documented by the design screenshots below. This is a team project; the screenshots are a portfolio view of the board rather than a claim of sole authorship of every subsystem.
+- **Hardware:** Designed the STM32 subsystem, strain-gauge measurement circuitry, and CAN communication circuitry, and completed the Corner Broker PCB layout. The schematic and layout screenshots below document this work.
 - **Firmware:** [Added a periodic LED task for corner identification and sensor status](https://github.com/NU-Formula-Racing/daq-corner-26/commit/5db22ae43391492a719b987f8e41eef74de8965e). The commit uses a one-to-four-blink corner code, indicates whether strain-gauge data has been received, and indicates when the suspension-potentiometer reading is within its expected ADC range.
 
 The linked [team firmware repository](https://github.com/NU-Formula-Racing/daq-corner-26) is the source of truth for software and its complete contributor history. Firmware is linked here rather than copied into this portfolio repository.
@@ -51,10 +51,6 @@ The linked [team firmware repository](https://github.com/NU-Formula-Racing/daq-c
 | Voltage regulation | [View schematic](hardware/schematics/voltage-regulation.png) |
 | Power and CAN connector | [View schematic](hardware/schematics/power-can-connector.png) |
 | Debug connector | [View schematic](hardware/schematics/debug-connector.png) |
-
-## Project status
-
-The images document the schematic and layout design. This repository does not yet include native CAD files, fabrication outputs, assembly photos, or measured bring-up results. Those should be added only when available and cleared for publication.
 
 **Tools and technologies:** Altium Designer, STM32, embedded C, CAN, SPI, I²C.
 
